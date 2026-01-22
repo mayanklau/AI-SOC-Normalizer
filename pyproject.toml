@@ -1,0 +1,13 @@
+[project]
+name = "ai-soc-normalizer"
+version = "0.1.0"
+description = "Security event normalizer using ECS or OSCF schemas."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+ai-soc-normalizer = "normalizer.cli:main"
+
+[tool.black]
+line-length = 100
