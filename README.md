@@ -15,6 +15,11 @@ Elastic Common Schema (ECS) or the OSCF framework.
 python -m normalizer.cli --schema ecs --source firewall --input example_events.json
 ```
 
+Normalize newline-delimited JSON with strict validation:
+```bash
+python -m normalizer.cli --schema ocsf --source auto --ndjson --strict --input events.ndjson
+```
+
 ## Example
 Input event:
 ```json

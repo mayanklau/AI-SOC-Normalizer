@@ -8,6 +8,7 @@ from typing import Any, Callable, Dict, Iterable, Mapping
 
 SchemaMap = Dict[str, Any]
 Transformer = Callable[[Mapping[str, Any]], SchemaMap]
+REQUIRED_FIELDS = ("event_time", "action")
 
 
 @dataclass(frozen=True)
@@ -144,3 +145,7 @@ SOURCES: Dict[str, SourceMapping] = {
 
 def list_sources() -> Iterable[str]:
     return SOURCES.keys()
+
+
+def required_fields() -> Iterable[str]:
+    return REQUIRED_FIELDS
